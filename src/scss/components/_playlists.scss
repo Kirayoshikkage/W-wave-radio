@@ -1,0 +1,355 @@
+.playlists {
+  padding: rem(94) 0 rem(95);
+  background-color: white;
+
+  &__container {
+    display: grid;
+    grid-template-columns: rem(350) 1fr;
+    grid-template-areas:
+      "one two"
+      "three two";
+    gap: rem(30);
+  }
+
+  &__radio-buttons {
+    display: grid;
+    row-gap: rem(22);
+    padding-bottom: rem(34);
+    border-bottom: 0.1rem solid var(--color-gray);
+  }
+
+  &__text {
+    color: var(--color-gray);
+
+    &_lh-22 {
+      line-height: 1.4;
+    }
+
+    &_mgb-8 {
+      margin: 0 0 rem(9);
+    }
+
+    &_mgb-6 {
+      margin: 0 0 rem(6);
+    }
+  }
+
+  &__title {
+    margin: 0 0 rem(11);
+  }
+
+  &__item {
+    &:nth-child(1) {
+      grid-area: one;
+    }
+
+    &:nth-child(2) {
+      grid-area: two;
+      padding-top: rem(14);
+    }
+
+    &:nth-child(3) {
+      grid-area: three;
+      align-self: flex-start;
+    }
+
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(160), 1fr));
+      gap: rem(30);
+    }
+  }
+
+  &__name-company {
+    display: block;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  &__limitation-age {
+    border-radius: 100%;
+    border: 0.1rem solid var(--color-gray);
+    width: rem(30);
+    height: rem(30);
+    padding: rem(7) rem(4.5);
+  }
+
+  &__age {
+    margin: 0;
+    font-size: rem(12);
+    line-height: 1.2;
+    color: var(--color-gray);
+  }
+
+  &__label {
+    font-size: rem(20);
+    color: var(--color-lightBlack);
+  }
+
+  &__buttons {
+    display: none;
+  }
+}
+
+.group-card {
+  position: relative;
+  .group-card__subtitle,
+  .group-card__text {
+    transition-property: color;
+    transition-duration: 0.4s;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(160);
+    @include image-set("../img/play_btn");
+    background-color: rgba(18, 23, 35, 0.7);
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+
+    transition: opacity 0.4s;
+  }
+
+  &__icon {
+    background-color: #121723;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(24);
+    height: rem(20);
+    padding: rem(4);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    color: var(--color-lightBlack);
+    margin: 0 0 rem(3);
+    word-wrap: break-word;
+    font-size: 1rem;
+  }
+
+  &__text {
+    font-size: rem(12);
+    color: var(--color-gray);
+    margin: auto 0 0;
+  }
+
+  &__item {
+    display: block;
+    &:first-child {
+      margin-bottom: rem(-6);
+    }
+
+    &:last-child {
+      border: 0.1rem solid var(--color-gray);
+      border-top: 0;
+      height: calc(100% - rem(160));
+      padding: rem(14);
+      display: flex;
+      flex-direction: column;
+      transition-property: background;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.musical-genre {
+  display: flex;
+
+  &__item {
+    padding: rem(9.5) rem(22.5);
+    color: var(--color-primary);
+    font-weight: 500;
+    border: rem(2) solid var(--color-primary);
+    border-radius: rem(77);
+    white-space: nowrap;
+
+    &_active {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(15);
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .playlists {
+    &__container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "one"
+        "two"
+        "three";
+    }
+
+    &__item {
+      &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(rem(254), 1fr));
+      }
+
+      &:nth-child(2) {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        position: relative;
+        padding-top: rem(50);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: rem(20);
+          right: 0;
+          width: 100%;
+          border: rem(1) solid var(--color-light);
+        }
+      }
+    }
+
+    .group-card {
+      display: flex;
+
+      &__icon {
+        top: 0;
+        left: 0;
+      }
+
+      &__item {
+        &:first-child {
+          img {
+            height: calc(100% - rem(2));
+          }
+        }
+
+        &:last-child {
+          border: 0.1rem solid var(--color-gray);
+          height: 100%;
+          padding: rem(10);
+          justify-content: center;
+        }
+      }
+
+      &__text {
+        margin: 0;
+      }
+    }
+
+    &__radio-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: row;
+      gap: rem(22) rem(38);
+      border: none;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .group-card {
+    &::before {
+      width: rem(110);
+      height: 100%;
+    }
+
+    &__item {
+      &:first-child {
+        margin-bottom: rem(-2);
+      }
+    }
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .playlists {
+    &__item {
+      &:nth-child(2) {
+        padding-top: rem(16);
+      }
+    }
+    &__radio-buttons {
+      gap: rem(36) rem(38);
+    }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .playlists {
+    padding: rem(54) 0;
+
+    &__item {
+      &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(rem(113), 1fr));
+        padding: 0 !important;
+      }
+
+      &:first-child {
+        overflow: hidden;
+      }
+
+      &:last-child {
+        padding-top: rem(30);
+
+        &::before {
+          top: rem(10);
+        }
+      }
+    }
+
+    .group-card {
+      flex-direction: column;
+
+      &::before {
+        width: 100%;
+        height: rem(113);
+      }
+
+      &__icon {
+        right: 0;
+      }
+
+      &__item {
+        &:first-child {
+          margin-bottom: rem(-4);
+          img {
+            width: 100%;
+            max-height: rem(113);
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-size: rem(12);
+    }
+
+    &__radio-buttons {
+      gap: rem(22) rem(38);
+
+      &_mobile-hidden {
+        display: none;
+      }
+    }
+
+    &__buttons {
+      max-width: 100%;
+      display: block;
+      overflow: scroll;
+      padding-bottom: rem(20);
+    }
+  }
+}

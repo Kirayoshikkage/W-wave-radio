@@ -1,0 +1,181 @@
+.guests {
+  padding: rem(94) 0;
+  background-color: var(--color-lightBlack);
+
+  &__title {
+    color: white;
+    margin: 0 0 rem(14);
+  }
+
+  &__desc {
+    max-width: rem(825);
+    color: var(--color-gray);
+    font-size: rem(20);
+    line-height: lh(40, 20);
+    margin: 0 0 rem(50);
+  }
+
+  &__span {
+    display: block;
+    font-weight: 700;
+    line-height: lh(30, 20);
+    margin: 0 0 rem(11);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, rem(730)) 1fr;
+    gap: rem(30);
+  }
+}
+
+.social {
+  display: flex;
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    fill: var(--color-gray);
+  }
+}
+
+.guests-card {
+  &__button {
+    padding: rem(10) rem(17);
+    font-size: 1rem;
+  }
+
+  &__img {
+    margin: 0 0 rem(9);
+  }
+
+  &__social {
+    margin: 0 0 rem(8);
+  }
+
+  &__name {
+    font-size: rem(20);
+    font-weight: 500;
+    color: white;
+    margin: 0 0 rem(12);
+  }
+
+  &__desc {
+    color: var(--color-gray);
+    line-height: lh(28, 16);
+    margin: 0 0 rem(30);
+  }
+
+  .social {
+    &__item {
+      &:not(:last-child) {
+        margin: 0 rem(29) 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .guests {
+    &__grid {
+      grid-template-columns: minmax(0, rem(540)) 1fr;
+    }
+
+    &__desc {
+      max-width: rem(536);
+    }
+
+    .tabs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .guests {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: rem(50);
+    }
+
+    .tabs {
+      gap: rem(28.5) rem(30);
+    }
+
+    .guests-card {
+      &__desc {
+        max-width: rem(398);
+      }
+
+      &__name {
+        margin: 0 0 rem(10);
+      }
+    }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .guests {
+    padding: rem(53) 0;
+
+    &__grid {
+      gap: rem(30);
+    }
+
+    &__title {
+      margin: 0 0 rem(10);
+    }
+
+    &__span {
+      margin: 0 0 rem(0);
+      line-height: lh(18, 14);
+    }
+
+    &__desc {
+      font-size: rem(14);
+      line-height: lh(20, 14);
+      margin: 0 0 rem(27);
+    }
+
+    .accordion {
+      &__trigger {
+        padding: rem(10) 0;
+      }
+
+      &__span {
+        font-size: rem(16);
+      }
+
+      &__icon {
+        width: rem(30);
+        height: rem(30);
+      }
+
+      &__content {
+        padding: rem(20) 0;
+      }
+    }
+
+    .tabs {
+      grid-template-columns: repeat(2, 1fr);
+
+      &__trigger {
+        font-size: rem(14);
+        line-height: lh(13.6, 14);
+        text-align: start;
+      }
+    }
+
+    .guests-card__img {
+      min-height: rem(159);
+    }
+
+    .social__item:not(:last-child) {
+      margin-right: rem(20);
+    }
+  }
+
+  .social__icon {
+    width: rem(36);
+    height: rem(36);
+  }
+}

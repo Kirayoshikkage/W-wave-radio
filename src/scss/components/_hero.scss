@@ -1,0 +1,132 @@
+.hero {
+  background-color: white;
+  &__container {
+    padding: rem(94) rem(15) rem(93);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(38);
+      right: rem(15);
+      max-height: rem(372);
+      width: calc(350 / 1110 * 100%);
+      height: 100%;
+      @include image-set("../img/hero__img");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+    }
+  }
+
+  &__lead {
+    margin: 0 0 rem(13) 0;
+    max-width: rem(633);
+    transform: translateX(rem(5));
+  }
+
+  &__desc {
+    transform: translateX(rem(5));
+    max-width: rem(635);
+    line-height: 1.5;
+    margin: 0 0 rem(45);
+  }
+
+  &__link {
+    color: var(--color-primary);
+  }
+
+  &__button {
+    display: inline-block;
+    transform: translateX(rem(4));
+  }
+}
+
+.lead {
+  font-size: rem(60);
+  font-weight: 700;
+
+  &__name-company {
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.button {
+  border-radius: rem(40);
+  font-size: rem(20);
+  font-weight: 500;
+
+  &_bg {
+    background-color: var(--color-primary);
+  }
+
+  &_size-large {
+    padding: rem(25) rem(54);
+  }
+
+  &_color-white {
+    color: white;
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .hero {
+    &__container {
+      padding: rem(89) rem(15);
+    }
+
+    &__desc,
+    &__lead {
+      max-width: rem(539);
+      transform: translateX(0);
+    }
+
+    &__desc {
+      margin: 0 0 rem(20);
+    }
+
+    &__button {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .hero {
+    &__container {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .hero {
+    min-height: auto;
+
+    &__container {
+      padding: rem(40) rem(32);
+    }
+
+    .lead {
+      font-size: rem(32);
+      margin: 0 0 rem(3);
+    }
+
+    &__desc {
+      max-width: 100%;
+      line-height: lh(18.5, 14);
+      font-size: rem(14);
+      margin: 0 0 rem(20);
+    }
+
+    .button {
+      &_size-large {
+        font-size: rem(16);
+        padding: rem(17) rem(45);
+      }
+    }
+  }
+}

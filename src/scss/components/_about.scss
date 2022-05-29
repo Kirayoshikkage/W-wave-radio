@@ -1,0 +1,260 @@
+.about {
+  background-color: var(--color-lightBlack);
+  padding: rem(94) 0 rem(91);
+
+  &__container {
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    color: white;
+    margin: 0 0 rem(11);
+  }
+
+  &__text-content {
+    max-width: rem(634);
+    color: var(--color-gray);
+    font-size: rem(20);
+  }
+
+  &__go {
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 rem(8);
+  }
+
+  &__text {
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__item {
+    &_bg {
+      background: url(../img/about_bg.svg) no-repeat right center;
+    }
+
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+      gap: rem(30);
+    }
+  }
+
+  .feedback {
+    max-width: rem(920);
+  }
+}
+
+.about-card {
+  &__img {
+    width: 100%;
+    margin: 0 0 rem(26);
+    max-height: rem(255);
+  }
+
+  &__subtitle {
+    font-size: rem(20);
+    font-weight: 500;
+    margin: 0 0 rem(6);
+    color: white;
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: var(--color-gray);
+    margin: 0;
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > *:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+
+  &__textarea {
+    resize: none;
+    padding: rem(30);
+    flex: 1 1 100%;
+    max-height: rem(150);
+    min-height: rem(150);
+  }
+
+  &__label {
+    position: relative;
+    &_mr-30 {
+      margin: 0 rem(30) 0 0;
+    }
+
+    flex: 1 1 calc(50% - rem(30));
+  }
+
+  &__input {
+    width: 100%;
+    padding: rem(23);
+  }
+
+  &__input,
+  &__textarea {
+    border: 0.1rem solid white;
+    border-radius: rem(30);
+    color: var(--color-gray);
+    font-size: rem(20);
+
+    &::placeholder {
+      color: var(--color-gray);
+      font-size: rem(20);
+    }
+  }
+
+  &__button {
+    padding: rem(25) rem(54);
+  }
+
+  &__custom-checkbox {
+    cursor: pointer;
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+
+    .custom-checkbox__content {
+      color: white;
+      font-size: rem(12);
+      font-weight: 500;
+    }
+
+    .custom-checkbox__field {
+      margin-right: rem(8);
+    }
+  }
+}
+
+.feedback-checkbox {
+  flex: 1 1 100%;
+  @include custom-checkbox;
+
+  &__content {
+    font-size: rem(12);
+    font-weight: 500;
+    color: white;
+    padding-left: rem(22);
+
+    &::before {
+      border-color: white;
+      width: rem(14);
+      height: rem(14);
+    }
+
+    &::after {
+      border-color: white;
+      width: rem(14);
+      height: rem(14);
+      background-image: url(../img/checkbox.svg);
+    }
+  }
+
+  &__field:focus + &__content::before {
+    outline: none;
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .about {
+    &__text-content {
+      max-width: rem(539);
+    }
+
+    &__item {
+      &_bg {
+        background: url(../img/about_bg_laptop.svg) no-repeat right center;
+      }
+
+      &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(rem(396), 1fr));
+      }
+    }
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .about {
+    background: url(../img/about_bg_tablet.svg) no-repeat top 26.5% left,
+      var(--color-lightBlack);
+    &__text-content {
+      max-width: rem(539);
+    }
+
+    &__item {
+      &_bg {
+        background: none;
+        padding-bottom: rem(142);
+      }
+
+      &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(rem(255), 1fr));
+      }
+    }
+
+    .feedback {
+      &__label {
+        &_mr-30 {
+          margin: 0 rem(30) rem(30) 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .about {
+    background: var(--color-lightBlack);
+    padding: rem(54) 0;
+
+    &__text-content {
+      font-size: rem(14);
+    }
+
+    &__item {
+      &_bg {
+        padding: 0;
+      }
+
+      &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(rem(113), 1fr));
+      }
+    }
+
+    .about-card {
+      &__img {
+        margin: 0 0 rem(12);
+      }
+
+      &__subtitle {
+        font-size: rem(14);
+        line-height: lh(18, 14);
+        margin: 0 0 rem(5);
+      }
+
+      &__text {
+        font-size: rem(12);
+      }
+    }
+
+    .feedback {
+      flex-direction: column;
+
+      &__button {
+        align-self: flex-start;
+      }
+
+      &__label,
+      &__textarea {
+        width: 100%;
+      }
+    }
+  }
+}

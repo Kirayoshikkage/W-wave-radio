@@ -1,0 +1,26 @@
+.tabs {
+  display: grid;
+  gap: rem(14) rem(30);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row dense;
+
+  &__trigger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: rem(16);
+  }
+
+  &__hide-content {
+    display: none;
+  }
+}
+
+.tabs-content-wrapper {
+  opacity: 1;
+  transition: opacity 0.6s;
+}

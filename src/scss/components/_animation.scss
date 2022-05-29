@@ -1,0 +1,697 @@
+@media (any-hover: hover) {
+  $animationDuration: 0.4s;
+  .nav-menu__link,
+  .extra-menu__link,
+  .footer-menu__link {
+    transition-property: color, background;
+    transition-duration: $animationDuration;
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:focus {
+      color: white;
+      background-color: var(--color-primaryLight);
+    }
+  }
+
+  .login-trigger {
+    transition-property: color, background;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+    }
+  }
+
+  .ether {
+    &__icon {
+      transition: fill $animationDuration;
+    }
+    &:hover {
+      .ether__icon {
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      .ether__icon {
+        fill: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .hero__button,
+  .feedback__button,
+  .login-modal__button {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-color: var(--color-primaryLight);
+    }
+
+    &:focus {
+      background-color: var(--color-primaryShade);
+    }
+  }
+
+  .hero__link,
+  .login-modal__link {
+    transition-property: background, border-bottom;
+    transition-duration: $animationDuration;
+    border-bottom: rem(1) solid transparent;
+    padding: 0 rem(2);
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+    }
+  }
+
+  .podcast__play {
+    .podcast__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+    &:hover {
+      .podcast__icon {
+        stroke: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      .podcast__icon {
+        stroke: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .statistics__button {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    .statistics__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+
+    .statistics__value {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .statistics__icon {
+        stroke: var(--color-primary);
+      }
+
+      .statistics__value {
+        color: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+      .statistics__icon {
+        stroke: white;
+        fill: white;
+      }
+
+      .statistics__value {
+        color: white;
+      }
+    }
+  }
+
+  .podcasts__button,
+  .guests-card__button {
+    transition-property: background, color;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: white;
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+      color: white;
+    }
+  }
+
+  .select__trigger {
+    transition-property: background, color;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-color: rgba(230, 232, 236, 0.4);
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+    }
+  }
+
+  .select__item {
+    transition-property: background, color;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-color: rgba(230, 232, 236, 0.4);
+      color: var(--color-lightBlack);
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+      color: var(--color-lightBlack);
+    }
+  }
+
+  .more-link {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    .more-link__text {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .more-link__icon {
+      transition-property: fill;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .more-link__text {
+        color: var(--color-primary);
+      }
+
+      .more-link__icon {
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      width: auto;
+      background-color: var(--color-primaryLight);
+      .more-link__text {
+        color: white;
+      }
+
+      .more-link__icon {
+        fill: white;
+      }
+    }
+  }
+
+  .transmission__button {
+    transition-property: background, color;
+    transition-duration: $animationDuration;
+
+    .transmission__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      background-color: var(--color-lightBlack);
+      color: white;
+
+      .transmission__icon {
+        stroke: white;
+      }
+    }
+
+    &:focus {
+      background-color: var(--color-primaryLight);
+    }
+  }
+
+  .accordion__trigger {
+    transition-property: background, border-color;
+    transition-duration: $animationDuration;
+
+    .accordion__span {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .accordion__icon {
+      transition-property: stroke, transform;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .accordion__span {
+        color: var(--color-primaryLight);
+      }
+
+      .accordion__icon {
+        stroke: var(--color-primaryLight);
+      }
+    }
+
+    &:focus {
+      background-color: rgba(170, 157, 250, 0.3);
+    }
+  }
+
+  .tabs__trigger {
+    transition-property: color;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      color: var(--color-primaryLight);
+    }
+
+    &:focus {
+      color: var(--color-primaryShade);
+    }
+  }
+
+  .social__link {
+    .social__icon {
+      transition-property: fill;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .social__icon {
+        fill: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      .social__icon {
+        fill: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .playlists__label {
+    &:hover {
+      span::before {
+        border-color: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      span::before {
+        border-color: var(--color-primary);
+        background-color: var(--color-gray);
+      }
+    }
+  }
+
+  .wave-radio__button {
+    transition-property: background;
+    transition-duration: $animationDuration;
+    &:hover,
+    &:focus {
+      background-color: black;
+    }
+  }
+
+  .feedback__textarea,
+  .feedback__input,
+  .login-modal__input {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    &:hover {
+      background-color: rgba(230, 232, 236, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(230, 232, 236, 0.1);
+      border-color: var(--color-primary);
+    }
+  }
+
+  .feedback-checkbox {
+    .feedback-checkbox__content {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .feedback-checkbox__content {
+      &::before {
+        transition-property: border-color;
+        transition-duration: $animationDuration;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .feedback-checkbox__content {
+        color: var(--color-primary);
+      }
+      .feedback-checkbox__content {
+        &::before {
+          border-color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  .modal__close {
+    .modal__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .modal__icon {
+        stroke: var(--color-primary);
+      }
+    }
+
+    &:focus {
+      .modal__icon {
+        stroke: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .group-card {
+    &:hover,
+    &:focus {
+      &::before {
+        opacity: 1;
+      }
+
+      .group-card__item {
+        &:last-child {
+          background-color: var(--color-primary);
+
+          .group-card__subtitle,
+          .group-card__text {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  $animationDuration: 0.4s;
+
+  .header__burger-button {
+    &:active {
+      .burger-button__item {
+        background-color: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .nav-menu__link,
+  .extra-menu__link,
+  .footer-menu__link {
+    transition-property: color;
+    transition-duration: $animationDuration;
+    &:active {
+      color: var(--color-primaryShade);
+    }
+  }
+
+  .login-trigger {
+    transition-property: color, background, border-color;
+    transition-duration: $animationDuration;
+
+    &:active {
+      color: white;
+      border-color: var(--color-primaryShade);
+      background-color: var(--color-primaryShade);
+    }
+  }
+
+  .ether {
+    &__icon {
+      transition: fill $animationDuration;
+    }
+    &:active {
+      .ether__icon {
+        fill: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .hero__button,
+  .feedback__button,
+  .login-modal__button,
+  .podcasts__button,
+  .guests-card__button,
+  .musical-genre__item {
+    transition-property: background, border;
+    transition-duration: $animationDuration;
+
+    &:active {
+      background-color: var(--color-primaryShade);
+      color: white;
+      border-color: var(--color-primaryShade);
+    }
+  }
+
+  .hero__link,
+  .login-modal__link {
+    transition-property: border-bottom;
+    transition-duration: $animationDuration;
+    border-bottom: rem(1) solid transparent;
+    padding: 0 rem(2);
+
+    &:active {
+      border-color: var(--color-primaryShade);
+    }
+  }
+
+  .podcast__play {
+    .podcast__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+    &:active {
+      .podcast__icon {
+        stroke: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .statistics__button {
+    .statistics__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+
+    .statistics__value {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    &:hover {
+      .statistics__icon {
+        stroke: var(--color-primaryShade);
+      }
+
+      .statistics__value {
+        color: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .select__trigger {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    &:active {
+      background-color: rgba(210, 213, 221, 1);
+    }
+  }
+
+  .select__item {
+    transition-property: background, color;
+    transition-duration: $animationDuration;
+
+    &:active {
+      background-color: rgba(210, 213, 221, 1);
+    }
+  }
+
+  .more-link {
+    .more-link__text {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .more-link__icon {
+      transition-property: fill;
+      transition-duration: $animationDuration;
+    }
+
+    &:active {
+      .more-link__text {
+        color: var(--color-primaryShade);
+      }
+
+      .more-link__icon {
+        fill: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .transmission__button {
+    transition-property: background, color, border;
+    transition-duration: $animationDuration;
+
+    .transmission__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+
+    &:active {
+      background-color: var(--color-primaryShade);
+      color: white;
+      border-color: var(--color-primaryShade);
+
+      .transmission__icon {
+        stroke: white;
+      }
+    }
+  }
+
+  .accordion__trigger {
+    .accordion__span {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .accordion__icon {
+      transition-property: stroke, transform;
+      transition-duration: $animationDuration;
+    }
+
+    &:active {
+      .accordion__span {
+        color: var(--color-primaryLight);
+      }
+
+      .accordion__icon {
+        stroke: var(--color-primaryLight);
+      }
+    }
+  }
+
+  .tabs__trigger {
+    transition-property: color;
+    transition-duration: $animationDuration;
+
+    &:active {
+      color: var(--color-primaryLight);
+    }
+  }
+
+  .social__link {
+    .social__icon {
+      transition-property: fill;
+      transition-duration: $animationDuration;
+    }
+
+    &:active {
+      .social__icon {
+        fill: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .playlists__label {
+    &:active {
+      span::before {
+        border-color: var(--color-primary);
+      }
+    }
+  }
+
+  .wave-radio__button {
+    transition-property: background;
+    transition-duration: $animationDuration;
+    &:active {
+      background-color: black;
+    }
+  }
+
+  .feedback__textarea,
+  .feedback__input,
+  .login-modal__input {
+    transition-property: background;
+    transition-duration: $animationDuration;
+
+    &:active {
+      background-color: rgba(230, 232, 236, 0.1);
+    }
+  }
+
+  .feedback-checkbox {
+    .feedback-checkbox__content {
+      transition-property: color;
+      transition-duration: $animationDuration;
+    }
+
+    .feedback-checkbox__content {
+      &::before {
+        transition-property: border-color;
+        transition-duration: $animationDuration;
+      }
+    }
+
+    &:active {
+      .feedback-checkbox__content {
+        color: var(--color-primary);
+      }
+      .feedback-checkbox__content {
+        &::before {
+          border-color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  .modal__close {
+    .modal__icon {
+      transition-property: stroke;
+      transition-duration: $animationDuration;
+    }
+    &:active {
+      .modal__icon {
+        stroke: var(--color-primaryShade);
+      }
+    }
+  }
+
+  .group-card {
+    &:active {
+      &::before {
+        opacity: 1;
+      }
+
+      .group-card__item {
+        &:last-child {
+          background-color: var(--color-primaryShade);
+
+          .group-card__subtitle,
+          .group-card__text {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

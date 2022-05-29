@@ -1,0 +1,27 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/burger-button";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/podcasts";
+@import "./components/transmission";
+@import "./components/guests";
+@import "./components/playlists";
+@import "./components/wave-radio";
+@import "./components/about";
+@import "./components/footer";
+@import "./components/animation";
+@import "./components/fade-animation";
+@import "./components/animation-height";
+
+@import "./components/custom-radio";
+@import "./components/accordion";
+@import "./components/select";
+@import "./components/tabs";
+@import "./components/burger-menu";
+@import "./components/formValidate";
+@import "./components/modal";

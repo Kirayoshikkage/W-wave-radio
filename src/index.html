@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W-Wawe</title>
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    @include('./partials/header.html') @include('./partials/login-modal.html')
+    <main class="main">
+      @include('./partials/burger-menu.html') @include('./partials/hero.html')
+      @include('./partials/podcasts.html')
+      @include('./partials/transmission.html')
+      @include('./partials/guests.html') @include('./partials/playlists.html')
+      @include('./partials/wave-radio.html') @include('./partials/about.html')
+      @include('./partials/feedback-modal.html')
+    </main>
+    @include('./partials/footer.html')
+  </body>
+</html>

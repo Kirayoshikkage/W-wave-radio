@@ -1,0 +1,23 @@
+.validate-error-message {
+  $transform: 9;
+
+  position: absolute;
+  color: rgba(255, 111, 111, 1);
+  font-size: rem(12);
+  top: rem($transform);
+  left: rem(25);
+  opacity: 0;
+  transform: translateY(rem(-$transform));
+
+  transition-property: opacity, transform;
+  transition-duration: 0.6s;
+
+  &_show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.validate-error {
+  border-color: rgba(255, 111, 111, 1);
+}

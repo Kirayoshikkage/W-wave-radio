@@ -1,0 +1,115 @@
+.wave-radio {
+  background-color: rgba(41, 46, 57, 1);
+  padding: rem(102) 0 rem(124);
+
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(0, rem(640)) minmax(0, rem(445));
+    gap: rem(50) rem(30);
+  }
+
+  &__item:last-child {
+    transform: translateY(rem(-10));
+  }
+
+  &__title {
+    color: var(--color-promo);
+    margin: 0 0 rem(48);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-31);
+      right: 0;
+      width: 100%;
+      height: rem(12);
+      background: url("../img/wave-border.svg");
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__text {
+    line-height: 1.82;
+    color: white;
+
+    &_mgb-12 {
+      margin: 0 0 rem(12);
+    }
+
+    &_mgb-30 {
+      margin: 0 0 rem(28);
+    }
+
+    &_color-promo {
+      color: var(--color-promo);
+    }
+  }
+
+  &__price {
+    margin: 0 0 rem(30);
+    font-size: rem(30);
+    color: white;
+    font-weight: 500;
+  }
+
+  &__button {
+    padding: rem(22) rem(11);
+    display: flex;
+    align-items: center;
+    border: rem(2) solid var(--color-promo);
+    font-weight: 500;
+    font-size: rem(20);
+    color: var(--color-promo);
+  }
+
+  &__icon {
+    margin: 0 rem(8) 0 0;
+    flex-shrink: 0;
+    width: rem(20);
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .wave-radio {
+    padding: rem(102) 0 rem(85);
+    &__item {
+      &:first-child {
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 63.99rem) {
+  .wave-radio {
+    padding: rem(82.5) 0;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .wave-radio {
+    padding: rem(54) 0;
+    &__container {
+      justify-items: center;
+      gap: rem(30);
+    }
+
+    &__text {
+      font-size: rem(14);
+    }
+
+    &__price {
+      margin: 0 0 rem(20);
+      font-size: rem(24);
+    }
+
+    &__button {
+      padding: rem(17) rem(14);
+      font-size: rem(14);
+    }
+  }
+}
