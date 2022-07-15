@@ -214,9 +214,3 @@ loginModal.init();
 guestsAccordion.resize(() => {
   guestsAccordion.updateHeight();
 });
-
-/**
- *
- * На вертикалке много где криво (модалка логин и бургер меню как минимум)
- *
- */
