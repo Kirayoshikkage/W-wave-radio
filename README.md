@@ -1,4 +1,4 @@
-# W-wave-radio
+# W-wave-radio http://wwaveradio.matvie1x.beget.tech/
 
 ## Установка проекта
 ```
